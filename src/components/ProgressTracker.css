@@ -1,0 +1,141 @@
+.progress-tracker {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  animation: slideDown 0.5s ease-out;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progress-info {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.correct-count {
+  color: #28a745;
+}
+
+.progress-bar-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #f0f0f0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.5s ease;
+  border-radius: 8px;
+}
+
+.progress-percentage {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #667eea;
+  min-width: 45px;
+  text-align: right;
+}
+
+.progress-dots {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #ddd;
+  background: white;
+}
+
+.dot.completed {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  border-color: #84fab0;
+  color: white;
+  box-shadow: 0 4px 12px rgba(132, 250, 176, 0.3);
+}
+
+.dot.attempted {
+  background: linear-gradient(135deg, #fa8485 0%, #fa84a8 100%);
+  border-color: #fa8485;
+  color: white;
+  box-shadow: 0 4px 12px rgba(250, 132, 133, 0.3);
+}
+
+.dot.pending {
+  background: #f5f5f5;
+  border-color: #ddd;
+  color: #999;
+}
+
+.dot:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .progress-tracker {
+    padding: 15px;
+  }
+
+  .progress-info {
+    gap: 15px;
+  }
+
+  .info-value {
+    font-size: 1.1rem;
+  }
+
+  .dot {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+}
